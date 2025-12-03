@@ -11,8 +11,10 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
   const [selectedNote, setSelectedNote] = useState(null);
 
-  // 1. Handle Note Generation
+
+// 1. Handle Note Generation (Update this)
   const handleNoteGenerated = (note) => {
+    setLoading(false); 
     setSelectedNote(note);
     setCurrentView('view_note');
   };
@@ -23,9 +25,11 @@ const HomePage = () => {
     setCurrentView('view_note');
   };
 
+  // 3. Back Navigation Logic (Update this)
   const handleBack = () => {
+    setLoading(false); 
     setSelectedNote(null);
-    setCurrentView('library');
+    setCurrentView('home'); // 
   };
 
   if (currentView === 'view_note' && selectedNote) {

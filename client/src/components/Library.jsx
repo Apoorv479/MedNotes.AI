@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAllNotes, deleteNote } from '../api/notesApi';
 import { Trash2, Search, BookOpen, Calendar } from 'lucide-react';
-import Loader from './Loader';
+import LibraryLoader from './LibraryLoader';
 import toast from 'react-hot-toast';
 
 const Library = ({ onNoteSelect }) => {
@@ -45,7 +45,8 @@ const Library = ({ onNoteSelect }) => {
     n.subject.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  if (loading) return <div className="mt-20"><Loader text="Loading your library..." /></div>;
+
+if (loading) return <LibraryLoader />;
 
   return (
     <div className="pb-24 px-4">
