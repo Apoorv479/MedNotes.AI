@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
 
 const DENTAL_MESSAGES = [
-  "🦷 Scanning patient's history...",
-  "💉 Injecting local anesthesia...",
-  "📚 Reading thick dental textbooks...",
-  "🤔 Thinking of tough Viva questions...",
-  "✨ Polishing the notes...",
-  "🦠 Removing bacteria from content...",
-  "🦷 Extracting key information...",
-  "📝 Formatting for exam mode...",
+  " Scanning patient's history...",
+  " Injecting local anesthesia...",
+  " Reading thick dental textbooks...",
+  " Thinking of tough Viva questions...",
+  " Polishing the notes...",
+  " Removing bacteria from content...",
+  " Extracting key information...",
+  " Formatting for exam mode...",
 ];
 
 const Loader = () => {
@@ -20,7 +20,7 @@ const Loader = () => {
     const interval = setInterval(() => {
       i = (i + 1) % DENTAL_MESSAGES.length;
       setMessage(DENTAL_MESSAGES[i]);
-    }, 2500); // Har 2.5 second mein message change hoga
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);

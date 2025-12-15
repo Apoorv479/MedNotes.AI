@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/api/notes', notesRoutes); 
 
 app.get('/', (req, res) => {
-  res.send('Server is Running! 🚀');
+  res.send('Server is Running! ');
 });
 
 app.listen(PORT, () => {

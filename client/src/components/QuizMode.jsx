@@ -21,7 +21,6 @@ const QuizMode = () => {
       const allNotes = res.data;
       
       let pool = [];
-      // Saare notes mein ghus kar sirf Questions nikalo
       allNotes.forEach(note => {
         if (note.content.viva_questions) {
           note.content.viva_questions.forEach(vq => {
@@ -51,7 +50,6 @@ const QuizMode = () => {
 
   const handleNext = () => {
     setShowAnswer(false);
-    // Agla sawal (Loop back to start if finished)
     setCurrentIndex((prev) => (prev + 1) % questions.length);
   };
 

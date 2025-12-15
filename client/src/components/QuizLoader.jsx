@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import { BrainCircuit, Lightbulb } from 'lucide-react';
 
 const QUIZ_PREP_MESSAGES = [
-  "🃏 Shuffling your flashcards...",
-  "🤫 Hiding the answers securely...",
-  "🧠 Activating Recall Mode...",
-  "🦷 Mixing Pedo, Ortho, and Surgery questions...",
-  "⚡ Sharpening your dental memory...",
-  "🎲 Randomizing the sequence...",
-  "👨‍⚕️ Preparing the Viva Board...",
+  " Shuffling your flashcards...",
+  " Hiding the answers securely...",
+  " Activating Recall Mode...",
+  " Mixing Pedo, Ortho, and Surgery questions...",
+  " Sharpening your dental memory...",
+  " Randomizing the sequence...",
+  " Preparing the Viva Board...",
 ];
 
 const QuizLoader = () => {
@@ -19,7 +19,7 @@ const QuizLoader = () => {
     const interval = setInterval(() => {
       i = (i + 1) % QUIZ_PREP_MESSAGES.length;
       setMessage(QUIZ_PREP_MESSAGES[i]);
-    }, 2000); // Har 2 second mein message change
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -49,16 +49,16 @@ const QuizLoader = () => {
         </div>
         <ul className="space-y-2 text-sm text-gray-600">
           <li className="flex gap-2">
-            <span>🤔</span> Read the question carefully.
+            <span></span> Read the question carefully.
           </li>
           <li className="flex gap-2">
-            <span>🗣️</span> Speak the answer <b>out loud</b>.
+            <span></span> Speak the answer <b>out loud</b>.
           </li>
           <li className="flex gap-2">
-            <span>👀</span> Tap <b>"Show Answer"</b> to verify.
+            <span></span> Tap <b>"Show Answer"</b> to verify.
           </li>
           <li className="flex gap-2">
-            <span>🤥</span>  Be prepared!.
+            <span></span>  Be prepared!.
           </li>
         </ul>
       </div>

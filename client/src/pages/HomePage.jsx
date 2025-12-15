@@ -43,10 +43,10 @@ const HomePage = () => {
       <div className="bg-white/80 backdrop-blur-md p-5 shadow-sm sticky top-0 z-20 flex justify-between items-center border-b border-gray-100">
         <div>
             <h1 className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 flex items-center gap-2">
-            Dental Companion AI 🦷
+            Dental Companion AI 
             </h1>
             <p className="text-xs font-semibold text-gray-400 mt-1">
-                Your Pocket Professor 🎓
+                Your Pocket Professor 
             </p>
         </div>
       </div>

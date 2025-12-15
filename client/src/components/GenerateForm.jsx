@@ -29,7 +29,7 @@ const GenerateForm = ({ onNotesGenerated, setLoading }) => {
     try {
       const res = await generateNote(formData);
       onNotesGenerated(res.data.note);
-      toast.success("Notes Generated Successfully! 🎉");
+      toast.success("Notes Generated Successfully! ");
     } catch (error) {
       console.error(error);
       toast.error("Failed to generate notes. Try again.");

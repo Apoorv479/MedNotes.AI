@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { LibraryBig, Search, BookOpen } from 'lucide-react';
 
 const LIBRARY_MESSAGES = [
-  "📂 Opening your digital bookshelf...",
-  "🔍 Searching through saved records...",
-  "📚 Dusting off the textbooks...",
-  "🦷 Retrieving patient history...",
-  "✨ Organizing your dental notes...",
-  "📖 Turning the pages...",
+  " Opening your digital bookshelf...",
+  " Searching through saved records...",
+  " Dusting off the textbooks...",
+  " Retrieving patient history...",
+  " Organizing your dental notes...",
+  " Turning the pages...",
 ];
 
 const LibraryLoader = () => {
@@ -18,7 +18,7 @@ const LibraryLoader = () => {
     const interval = setInterval(() => {
       i = (i + 1) % LIBRARY_MESSAGES.length;
       setMessage(LIBRARY_MESSAGES[i]);
-    }, 1500); // Har 1.5 second mein message change
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);

@@ -14,7 +14,6 @@ function fileToGenerativePart(buffer, mimeType) {
 
 const generateDentalNotes = async (subject, topic, baseText, imageBuffer = null, mimeType = null) => {
   try {
-    // ✅ HUM "GEMINI-2.5-FLASH" USE KAR RAHE HAIN (TEXT + IMAGE DONO KE LIYE)
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     console.log(` Using AI Model: gemini-2.5-flash`);
@@ -74,13 +73,13 @@ const generateDentalNotes = async (subject, topic, baseText, imageBuffer = null,
     const response = await result.response;
     const text = response.text();
 
-    // Cleaning JSON (Markdown hatana)
+    // Cleaning JSON
     const jsonString = text.replace(/```json|```/g, "").trim();
     
     return JSON.parse(jsonString);
 
   } catch (error) {
-    console.error("❌ AI Service Error:", error);
+    console.error(" AI Service Error:", error);
     throw new Error("Failed to generate notes. AI Error.");
   }
 };

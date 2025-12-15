@@ -17,7 +17,7 @@ router.post('/generate', upload.single('file'), async (req, res) => {
     let imageBuffer = null;
     let mimeType = null;
 
-    console.log(`📝 Generating notes for: ${subject} - ${mode}`);
+    console.log(` Generating notes for: ${subject} - ${mode}`);
 
     // --- CASE 1: PDF Handling ---
     if (mode === 'pdf' && req.file) {
@@ -55,12 +55,12 @@ router.post('/generate', upload.single('file'), async (req, res) => {
     });
 
     const savedNote = await newNote.save();
-    console.log("✅ Note Saved ID:", savedNote._id);
+    console.log(" Note Saved ID:", savedNote._id);
 
     res.json({ success: true, note: savedNote });
 
   } catch (error) {
-    console.error("❌ Route Error:", error);
+    console.error(" Route Error:", error);
     res.status(500).json({ success: false, error: error.message });
   }
 });

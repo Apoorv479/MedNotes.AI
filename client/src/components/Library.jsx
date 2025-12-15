@@ -27,12 +27,12 @@ const Library = ({ onNoteSelect }) => {
 
   // 2. Handle Delete
   const handleDelete = async (e, id) => {
-    e.stopPropagation(); // Card click hone se roko
+    e.stopPropagation();
     if (!window.confirm("Are you sure you want to delete this note?")) return;
     
     try {
       await deleteNote(id);
-      setNotes(notes.filter(n => n._id !== id)); // List se hatao
+      setNotes(notes.filter(n => n._id !== id));
       toast.success("Note deleted");
     } catch (error) {
       toast.error("Could not delete");

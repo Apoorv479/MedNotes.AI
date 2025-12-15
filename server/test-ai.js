@@ -2,7 +2,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 require('dotenv').config();
 
-const API_KEY = process.env.GEMINI_API_KEY || AIzaSyB2l0zi37ugC_HeXLitFkJ_-kH2f1loFFk;
+const API_KEY = process.env.GEMINI_API_KEY || "AIzaSyB2l0zi37ugCHeXLitFkJkH2f1loFF"
 
 async function testGemini() {
   console.log("1. Connecting to Gemini...");
@@ -15,10 +15,10 @@ async function testGemini() {
     const result = await model.generateContent("Say Hello to a dental student");
     const response = await result.response;
     const text = response.text();
-    console.log("✅ SUCCESS! AI Responded:");
+    console.log(" SUCCESS! AI Responded:");
     console.log(text);
   } catch (error) {
-    console.error("❌ FAILED. Error details:");
+    console.error(" FAILED. Error details:");
     console.error(error.message);
   }
 }
